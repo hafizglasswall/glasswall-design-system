@@ -31,12 +31,11 @@ interface GwNavItemProp extends ListItemProps {
     Icon: SvgIconComponent;
     handleNavigation: any;
 }
-export const GwNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor, selected }: GwNavItemProp) => {
+const SIDE_NAV_ICON_BG_COLOR = "linear-gradient(90deg, #00B372 0%, #2BA9D6 100%)";
+export const FioNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor, selected }: GwNavItemProp) => {
     return (
         <GwListItemButton selected={selected} onClick={handleNavigation}>
-            <GwListItemIcon sx={{
-                background: selected ? "linear-gradient(90deg, #00B372 0%, #2BA9D6 100%)" : "transparent",
-            }}>
+            <GwListItemIcon sx={{ background: selected ? SIDE_NAV_ICON_BG_COLOR : "transparent" }}>
                 <Icon />
             </GwListItemIcon>
             <GwListItemText primary={name} primaryTypographyProps={selected ? { fontWeight: 'bold' } : {}} />

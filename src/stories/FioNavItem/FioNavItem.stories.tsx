@@ -1,19 +1,19 @@
 
 import { DashboardTwoTone, Folder, Mail, Report, SecurityUpdateWarningTwoTone } from '@mui/icons-material';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { GwNavItem } from './GwNavItem';
+import { FioNavItem } from './FioNavItem';
 
 export default {
     title: 'FiO/GwNavItem',
-    component: GwNavItem,
+    component: FioNavItem,
     parameters: {
         // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'centered',
     },
-} as ComponentMeta<typeof GwNavItem>;
+} as ComponentMeta<typeof FioNavItem>;
 
-const Template: ComponentStory<typeof GwNavItem> = (args) => {
-    return <GwNavItem {...args} />
+const Template: ComponentStory<typeof FioNavItem> = (args) => {
+    return <FioNavItem {...args} />
 };
 export const NavItemPrimary = Template.bind({});
 NavItemPrimary.args = {

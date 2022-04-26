@@ -4,7 +4,7 @@ import List from '@mui/material/List/List';
 import ListItem from '@mui/material/ListItem/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
-import { GwNavItem } from "../GwNavItem/GwNavItem";
+import { FioNavItem } from "../FioNavItem/FioNavItem";
 import { GwNavItems } from "../GwNavItems/GwNavItems";
 
 const data = [
@@ -34,7 +34,13 @@ export const Layout = () => {
             <List>
                 {
                     data.map(({ name, Icon }, index) => {
-                        return <GwNavItem key={name} name={name} Icon={Icon} selected={index === 1} handleNavigation={() => { }} />
+                        return <FioNavItem
+                            key={name}
+                            name={name}
+                            Icon={Icon}
+                            selected={index === 1}
+                            handleNavigation={() => { console.log('handle navigation') }}
+                        />
                     })
                 }
             </List>
