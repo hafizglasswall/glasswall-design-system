@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const GlasswallLogo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
+export const GlasswallLogo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
     <svg
         width={140}
         height={77}
