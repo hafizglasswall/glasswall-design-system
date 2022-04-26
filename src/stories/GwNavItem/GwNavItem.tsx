@@ -43,20 +43,3 @@ export const GwNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor, 
         </GwListItemButton>
     )
 }
-
-const FioNavButton = styled((Button))({
-    color: 'white',
-
-})
-
-export const _GwNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor, selected }: GwNavItemProp) => {
-    return (
-        <FioNavButton
-            onClick={handleNavigation}
-            startIcon={<Icon />}>
-            {name}
-        </FioNavButton>
-    )
-}
-
-// "linear-gradient(180deg, #11497C 0%, #1F8C8C 100%)"
