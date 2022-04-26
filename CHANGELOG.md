@@ -24,6 +24,19 @@
 
 ---
 
+# v0.1.2 (Tue Apr 26 2022)
+
+#### ⚠️ Pushed to `develop`
+
+- updated release script ([@hafizglasswall](https://github.com/hafizglasswall))
+- exporting the glasswall icon ([@hafizglasswall](https://github.com/hafizglasswall))
+
+#### Authors: 1
+
+- [@hafizglasswall](https://github.com/hafizglasswall)
+
+---
+
 # v0.1.1 (Tue Apr 26 2022)
 
 #### ⚠️ Pushed to `master`
