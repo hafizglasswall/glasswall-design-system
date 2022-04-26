@@ -1,7 +1,7 @@
 {
-  "name": "glasswall-design-system",
+  "name": "@glasswall/glasswall-component-library",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
@@ -67,6 +68,23 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.6.2",
     "webpack": "^5.72.0"
-  }
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
+  "description": "Glasswall design system to be used across various products developed at glasswall",
+  "main": "dist/index.js",
+  "author": "hafizglasswall <96419297+hafizglasswall@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": "https://github.com/hafizglasswall/glasswall-design-system.git"
 }
