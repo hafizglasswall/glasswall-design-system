@@ -34,7 +34,7 @@ export const Layout = () => {
             <List>
                 {
                     data.map(({ name, Icon }, index) => {
-                        return <GwNavItem name={name} Icon={Icon} selected={index === 1} handleNavigation={() => { }} />
+                        return <GwNavItem key={name} name={name} Icon={Icon} selected={index === 1} handleNavigation={() => { }} />
                     })
                 }
             </List>
