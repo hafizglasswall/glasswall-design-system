@@ -1,17 +1,9 @@
 import { BoltRounded, SvgIconComponent } from "@mui/icons-material";
 import { Button, ListItem, ListItemButton, ListItemIcon, ListItemProps, ListItemText, makeStyles, styled } from "@mui/material"
 
-interface GwNavItemProp extends ListItemProps {
-    name: string;
-    iconColor?: string;
-    fontColor?: string;
-    Icon: SvgIconComponent;
-    handleNavigation: any;
-}
-
 const GwListItemButton = styled(ListItemButton)(({
+    borderRadius: '8px',
     '&.Mui-selected': {
-        borderRadius: '8px',
         backgroundColor: '#11182733',
     },
     marginTop: '1em',
@@ -32,6 +24,13 @@ const GwListItemIcon = styled((ListItemIcon))({
     minWidth: '0',
     marginRight: '1em'
 })
+interface GwNavItemProp extends ListItemProps {
+    name: string;
+    iconColor?: string;
+    fontColor?: string;
+    Icon: SvgIconComponent;
+    handleNavigation: any;
+}
 export const GwNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor, selected }: GwNavItemProp) => {
     return (
         <GwListItemButton selected={selected} onClick={handleNavigation}>
