@@ -4,6 +4,8 @@ import List from '@mui/material/List/List';
 import ListItem from '@mui/material/ListItem/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
+import { Box, styled } from "@mui/system";
+import GlasswallLogo from "../../Icons/GlasswallLogo";
 import { FioNavItem } from "../FioNavItem/FioNavItem";
 import { GwNavItems } from "../GwNavItems/GwNavItems";
 
@@ -25,12 +27,20 @@ const data = [
         Icon: Folder
     }
 ]
-
+const FioLogoBox = styled(Box)({
+    margin: '4em'
+})
+const FioDrawer = styled(Drawer)({
+    '.MuiPaper-root': {
+        background: 'linear-gradient(180deg, #11497C 0%, #1F8C8C 100%)'
+    }
+})
 export const Layout = () => {
     return (
-        <Drawer
-            variant="permanent"
-            PaperProps={{ sx: { background: 'linear-gradient(180deg, #11497C 0%, #1F8C8C 100%)' } }}>
+        <FioDrawer variant="permanent">
+            <FioLogoBox>
+                <GlasswallLogo />
+            </FioLogoBox>
             <List>
                 {
                     data.map(({ name, Icon }, index) => {
@@ -44,6 +54,6 @@ export const Layout = () => {
                     })
                 }
             </List>
-        </Drawer>
+        </FioDrawer>
     )
 }
