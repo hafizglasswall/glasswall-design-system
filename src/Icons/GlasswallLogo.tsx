@@ -2,8 +2,6 @@ import * as React from "react";
 
 export const GlasswallLogo = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
     <svg
-        width={140}
-        height={77}
         viewBox="0 0 140 77"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
