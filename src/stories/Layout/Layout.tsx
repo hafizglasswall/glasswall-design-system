@@ -1,17 +1,9 @@
-import { AbcOutlined, DashboardTwoTone, Folder, Info, Mail, Report, SecurityUpdateWarningTwoTone } from "@mui/icons-material";
 import Drawer from "@mui/material/Drawer/Drawer"
 import List from '@mui/material/List/List';
-import ListItem from '@mui/material/ListItem/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText/ListItemText';
 import { Box, styled } from "@mui/system";
 import GlasswallLogo from "../../Icons/GlasswallLogo";
 import { DashboardIcon } from "../../Icons/DashboardIcon";
 import { FioNavItem } from "../FioNavItem/FioNavItem";
-import { GwNavItems } from "../GwNavItems/GwNavItems";
-import { CleanFilesIcon } from "../../Icons/CleanFilesIcon";
-import { ReportIcon } from "../../Icons/ReportIcon";
-import { GetHelpIcon } from "../../Icons/GetHelpIcon";
 
 interface NavItems {
     name: string;
@@ -24,15 +16,15 @@ const mainNav: NavItems[] = [
     },
     {
         name: 'Clean Files',
-        Icon: CleanFilesIcon
+        Icon: DashboardIcon
     },
     {
         name: 'View Reports',
-        Icon: ReportIcon
+        Icon: DashboardIcon
     },
     {
         name: 'Get Help',
-        Icon: GetHelpIcon
+        Icon: DashboardIcon
     }
 ]
 const FioLogoBox = styled(Box)({
@@ -45,7 +37,7 @@ const FioDrawer = styled(Drawer)({
 })
 
 const BottomNavList = styled(List)({
-    position: 'absolute',
+    position: 'static',
     bottom: 0,
     width: '100%'
 })
@@ -62,7 +54,7 @@ export const Layout = () => {
                             key={name}
                             name={name}
                             Icon={Icon}
-                            selected={true}
+                            selected={false}
                             handleNavigation={() => { console.log('handle navigation') }}
                         />
                     })
@@ -87,10 +79,10 @@ export const Layout = () => {
 const bottomNav = [
     {
         name: 'Settings',
-        Icon: Report
+        Icon: DashboardIcon
     },
     {
         name: 'About',
-        Icon: Info
+        Icon: DashboardIcon
     }
 ]

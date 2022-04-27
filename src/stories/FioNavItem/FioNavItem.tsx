@@ -36,7 +36,7 @@ export const FioNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor,
     return (
         <GwListItemButton selected={selected} onClick={handleNavigation}>
             <GwListItemIcon sx={{ background: selected ? SIDE_NAV_ICON_BG_COLOR : "transparent" }}>
-                <Icon fontSize={'large'} sx={selected ? { fontColor: 'white' } : {}} />
+                <Icon fontSize={'large'} sx={selected ? { color: 'white' } : {}} />
             </GwListItemIcon>
             <GwListItemText primary={name} primaryTypographyProps={selected ? { fontWeight: 'bold' } : {}} />
         </GwListItemButton>
