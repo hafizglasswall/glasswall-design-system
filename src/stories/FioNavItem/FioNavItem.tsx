@@ -1,5 +1,5 @@
 import { BoltRounded, SvgIconComponent } from "@mui/icons-material";
-import { Button, ListItem, ListItemButton, ListItemIcon, ListItemProps, ListItemText, makeStyles, styled } from "@mui/material"
+import { Button, ListItem, ListItemButton, ListItemIcon, ListItemProps, ListItemText, makeStyles, styled, SvgIcon } from "@mui/material"
 
 const GwListItemButton = styled(ListItemButton)(({
     borderRadius: '8px',
@@ -28,7 +28,7 @@ interface GwNavItemProp extends ListItemProps {
     name: string;
     iconColor?: string;
     fontColor?: string;
-    Icon: SvgIconComponent;
+    Icon: React.ElementType;
     handleNavigation: any;
 }
 const SIDE_NAV_ICON_BG_COLOR = "linear-gradient(90deg, #00B372 0%, #2BA9D6 100%)";
@@ -36,7 +36,7 @@ export const FioNavItem = ({ handleNavigation, iconColor, name, Icon, fontColor,
     return (
         <GwListItemButton selected={selected} onClick={handleNavigation}>
             <GwListItemIcon sx={{ background: selected ? SIDE_NAV_ICON_BG_COLOR : "transparent" }}>
-                <Icon />
+                <Icon fontSize={'large'} sx={selected ? { color: 'white' } : {}} />
             </GwListItemIcon>
             <GwListItemText primary={name} primaryTypographyProps={selected ? { fontWeight: 'bold' } : {}} />
         </GwListItemButton>

@@ -1,6 +1,7 @@
 
 import { DashboardTwoTone, Folder, Mail, Report, SecurityUpdateWarningTwoTone } from '@mui/icons-material';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { DashboardIcon } from '../../Icons/DashboardIcon';
 import { FioNavItem } from './FioNavItem';
 
 export default {
@@ -18,7 +19,7 @@ const Template: ComponentStory<typeof FioNavItem> = (args) => {
 export const NavItemPrimary = Template.bind({});
 NavItemPrimary.args = {
     name: 'Dashboard',
-    Icon: DashboardTwoTone,
+    Icon: DashboardIcon,
 }
 
 export const NavItemOnSelected = Template.bind({});
